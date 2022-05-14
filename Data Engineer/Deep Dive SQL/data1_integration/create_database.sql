@@ -105,13 +105,13 @@ CREATE TABLE IF NOT EXISTS venta (
   Id_Venta INT,
   Fecha DATE,
   Fecha_entrega DATE,
-  Precio VARCHAR(30),
-  Cantidad VARCHAR(30),
-  Id_Sucursal INT,
-  Id_Producto INT,
-  Id_Empleado INT,
+  Id_canal INT,
   Id_Cliente INT,
-  Id_Canal INT
+  Id_Sucursal INT,
+  Id_Empleado INT,
+  Id_Producto INT,
+  Precio VARCHAR(30),
+  Cantidad VARCHAR(30)
 ) ENGINE=InnoDB DEFAULT charset=utf8mb4 collate=utf8mb4_spanish_ci;
 
 
@@ -121,10 +121,10 @@ CREATE TABLE IF NOT EXISTS venta (
 DROP TABLE if EXISTS gasto;
 CREATE TABLE IF NOT EXISTS gasto (
   Id_Gasto INT,
-  Fecha DATE,
-  Monto VARCHAR(30),
+  Id_Sucursal INT,
   Id_Tipo_Gasto INT,
-  Id_Sucursal INT
+  Fecha DATE,
+  Monto VARCHAR(30)
 ) ENGINE=InnoDB DEFAULT charset=utf8mb4 collate=utf8mb4_spanish_ci;
 
 
@@ -135,8 +135,8 @@ DROP TABLE if EXISTS compra;
 CREATE TABLE IF NOT EXISTS compra (
   Id_Compra INT,
   Fecha DATE,
-  Cantidad INT,
-  Precio DOUBLE,
   Id_Producto INT,
+  Cantidad INT,
+  Precio VARCHAR(30),
   Id_Proveedor INT
 ) ENGINE=InnoDB DEFAULT charset=utf8mb4 collate=utf8mb4_spanish_ci;
