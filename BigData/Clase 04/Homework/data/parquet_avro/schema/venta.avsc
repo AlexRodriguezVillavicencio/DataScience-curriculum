@@ -1,0 +1,14 @@
+{"namespace": "example.ventas",
+ "type": "record",
+ "name": "ventas",
+ "fields": [
+     {"name": "id_cliente", "type": "int"},
+     {"name": "id_sucursal", "type": "int"},
+     {"name": "id_producto", "type": "int"},
+     {"name": "cantidad", "type": "int"},
+     {"name": "precio", "type": "float"},
+     {"name": "fecha_dia", "type": "int"},
+     {"name": "fecha_mes", "type": "int"},
+     {"name": "fecha_anio", "type": "int"}
+ ]
+}
