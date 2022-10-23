@@ -1,0 +1,5 @@
+1. Desarrollar un script en python que baje desde Buenos Aires Data el JSON correspondiente a los Centros Médicos Barriales.
+2. Insertar ese JSON en una base de datos de mongo.
+3. Realizar un query que traiga los datos de las estaciones saludables del barrio de Barracas, ordenados por el campo OBJECTID, descendente.
+4. Realizar un query que traiga los datos de las Centros Médicos Barriales donde dentro de las especialidades se incluya Odontología.
+5. Generar a partir de este JSON un archivo de salida de tipo CSV, para su posterior geovisualización en www.gpsvisualizer.com , como fue realizado en el módulo 1, considerando que los campos/encabezados deben ser: latitude, longitude, name, label.
