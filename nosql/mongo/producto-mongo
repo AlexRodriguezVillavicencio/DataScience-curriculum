@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "63653a45fd376d275c17eac0"
+  },
+  "producto": "gaseosa",
+  "precio": 10,
+  "proveedor": "gonzales"
+},{
+  "_id": {
+    "$oid": "63653a45fd376d275c17eac1"
+  },
+  "producto": "galleta",
+  "precio": 2
+}]

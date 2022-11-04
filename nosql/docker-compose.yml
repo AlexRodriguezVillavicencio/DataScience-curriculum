@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  mongodb:
+    build:
+      context: .
+    restart: always
+    environment:
+      - MONGO_INIT_USERNAME=usermongo
+      - MONGO_INITDB_PASSWORD=userpwd
+      - MONGO_INITDB_DATABASE=exampledb
+    ports:
+      - 12500:27017
+    volumes:
+      - ./mongo/:/etc/mongo
+volumes:
+  mongo: {}
