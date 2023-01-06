@@ -1,0 +1,12 @@
+prime_numbers:
+- 2
+- 3
+- 5
+- 7
+- 11
+- 13
+- 17
+- 19
+rest:
+  port: 8443
+  url: https://example.org/primenumbers/v1
