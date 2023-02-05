@@ -1,6 +1,6 @@
 ### **¿Cómo puedo saber que modelo elegir en función de mi problema comercial?**
 
-Lo primero es entender si nusetro problema o bien es de regresión, clasifición, agrupamiento (clustering).
+Lo primero es entender si nusetro problema o bien es de regresión, clasificación, agrupamiento (clustering).
 
 Simplemente veamos la variable dependiente: 
 - si no tiene variable dependiente lo
