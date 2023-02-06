@@ -35,4 +35,36 @@ fn main() {
         println!("arreglo en posición 3: {}",_arreglo[2]);
     // vectores:
         // let _vector; // el tamaño es variable (si se puede añadir más elementos)
+        
+    // LOOP
+        let mut i :i8=3;
+        loop {
+            println!("estamos en el número: {}",i);
+            if i==1{
+                break;
+            }
+            i -=1;
+        }
+        // con retorno
+        let mut p:i8 =0;
+        let suma = loop{
+            if p==10{
+                break p;
+            }
+            p+=1;
+        };
+        println!("suma: {}",suma);
+
+    // WHILE
+        let mut m:i8 =0;
+        while m<2 { 
+            println!("cambio while: {}",m);
+            m+=1;
+        }
+    
+    // FOR
+        let a = ['a','b','2'];
+        for i in a.iter(){
+            println!("arreglo: {}",i)
+        }
 }
