@@ -67,4 +67,31 @@ fn main() {
         for i in a.iter(){
             println!("arreglo: {}",i)
         }
+
+    // STRING
+    {
+        let mut cadena = String::from("este es una cadena");
+        cadena.push_str(" y aquí le añadimos más texto");
+        println!("{}",cadena);
+        // let y = cadena;  aquí solo copiamos la dirección de memoria donde se aloja cadena
+        // copiar datos del stack
+        let y = cadena.clone();
+        println!("{} y también lo hemos clonado",y)
+        // los string necesitan usar el metodo clone(), pero los datos primitivos no
+    }
+    // OWNERSHIP
+    {
+        // entonces vemos que para los datos primitivos está implicita la función clone()
+        let x = 24;
+        println!("{}",x); // aquí se crea un copia 
+        numero(x); // de igual manera numero() recibe una copia de x en otra dirección de memoria
+        // a diferencia de los datos compuestos (como los string) donde se estaría trabajando sobre
+        // la misma dirección de memoria
+        println!("{}",x);
+    }
+
+}
+
+fn numero(numero:i32){
+    println!("dentro de la función: {}",numero);
 }
