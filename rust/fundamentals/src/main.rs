@@ -89,9 +89,55 @@ fn main() {
         // la misma dirección de memoria
         println!("{}",x);
     }
+    // BORROWING
+    {
+        // Referencias y prestamos
+        let texto = String::from("TEXTO");
+        let len = get_len(texto);
+        println!("longitud: {}", len);
+
+        let texto2 = String::from("TEXTO2");
+        let len2 = get_len2(&texto2);
+        println!("texto: {} || longitud : {}",texto2, len2);
+        
+        // Referencias y prestamos modificables
+        let mut variablemut = String::from("hola");
+        println!("variable: {}",variablemut);
+        cambiar(&mut variablemut);
+        println!("variable: {}", variablemut);
+
+        // let r1 = &mut variablemut;
+        // let r2 = &mut variablemut;
+        // las string al no tener un tamaño definido se almacenan en el heap (ir a la memoria ram,
+        // buscar un gran espacio y almacenarlo ahí), una vez almacenado se crea un puntero con la
+        // dirección de memoria (referencia) y esa referencia se almacena en el stack.
+        
+        // let r1 = &variablemut;
+        // let r2 = &variablemut;
+        // aquí no importa si ambos r1 y r2 tienen acceso a la variable, por que ninguno tiene
+        // permiso de modificarla
+
+        let r1 = &mut variablemut.clone();
+        let r2 = &mut variablemut;
+        println!("r1: {} || r2: {}",r1,r2);
+        // aquí vemos como clonamos la variable en r1 y de esa  manera ya podemos hacer la mutabilidad
+    }
 
 }
 
 fn numero(numero:i32){
     println!("dentro de la función: {}",numero);
+}
+
+fn get_len(texto_local: String) -> usize{
+    texto_local.len() // no colocamos ; por que estamos retornando un valor
+}
+
+// referenciado
+fn get_len2(texto_local: &String) -> usize{
+    texto_local.len() // no colocamos ; por que estamos retornando un valor
+}
+
+fn cambiar(texto_local: &mut String){
+    texto_local.push_str(" mundo...");
 }
